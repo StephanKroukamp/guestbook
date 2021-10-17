@@ -1,0 +1,1020 @@
+{
+  "contractName": "Guestbook",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "SignatureAdded",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "signBook",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getNames",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"}],\"name\":\"SignatureAdded\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getNames\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"}],\"name\":\"signBook\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Guestbook.sol\":\"Guestbook\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Guestbook.sol\":{\"keccak256\":\"0xdcdf0c3e6085f7b427b790012ccbadb2899fd9ab2f570d0b6d3b181581fc8668\",\"urls\":[\"bzz-raw://8f1c0ab779ec2f388546b369ea575ee6374a9a99d384b6e979ab0f2bb739dd61\",\"dweb:/ipfs/QmY4THQ6byaRZ9jFE5TfRXdxxN5beT45mrewK2NvsVc23h\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101f4806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063041be4f81461003b578063cd838f0f14610069575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506100c8565b005b610071610167565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100b4578082015181840152602081019050610099565b505050509050019250505060405180910390f35b60008190806001815401808255809150509060018203906000526020600020016000909192909190915055507f52459aff3b9a588e65d060c0affd7121b01e01e17dfcc75e0050b9035822e319816040518080602001838152602001828103825260148152602001807f4e6577206775657374207369676e6174757265210000000000000000000000008152506020019250505060405180910390a150565b606060008054806020026020016040519081016040528092919081815260200182805480156101b557602002820191906000526020600020905b8154815260200190600101908083116101a1575b505050505090509056fea265627a7a7231582009c96f54be560614f5e6e26fd888b8ca74e1333776e4bd3c9f42a0ec081258fb64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063041be4f81461003b578063cd838f0f14610069575b600080fd5b6100676004803603602081101561005157600080fd5b81019080803590602001909291905050506100c8565b005b610071610167565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100b4578082015181840152602081019050610099565b505050509050019250505060405180910390f35b60008190806001815401808255809150509060018203906000526020600020016000909192909190915055507f52459aff3b9a588e65d060c0affd7121b01e01e17dfcc75e0050b9035822e319816040518080602001838152602001828103825260148152602001807f4e6577206775657374207369676e6174757265210000000000000000000000008152506020019250505060405180910390a150565b606060008054806020026020016040519081016040528092919081815260200182805480156101b557602002820191906000526020600020905b8154815260200190600101908083116101a1575b505050505090509056fea265627a7a7231582009c96f54be560614f5e6e26fd888b8ca74e1333776e4bd3c9f42a0ec081258fb64736f6c63430005100032",
+  "sourceMap": "64:317:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:317:0;;;;;;;",
+  "deployedSourceMap": "64:317:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:317:0;;;;;;;;;;;;;;;;;;;;;;;;164:125;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;164:125:0;;;;;;;;;;;;;;;;;:::i;:::-;;293:85;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;293:85:0;;;;;;;;;;;;;;;;;164:125;210:6;222:4;210:17;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;210:17:0;;;;;;;;;;;;;;;;;;;;;;239:44;278:4;239:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;164:125;:::o;293:85::-;334:16;366:6;359:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;293:85;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.5.16;\r\n\r\ncontract Guestbook {\r\n  event SignatureAdded(string message, bytes32 name);\r\n  bytes32[] guests;\r\n  function signBook(bytes32 name) public {\r\n    guests.push(name);\r\n    emit SignatureAdded(\"New guest signature!\", name);\r\n  }\r\n  function getNames() public view returns (bytes32[] memory) {\r\n    return guests;\r\n  }\r\n}",
+  "sourcePath": "C:\\projects\\guestbook\\contracts\\Guestbook.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Guestbook.sol",
+    "exportedSymbols": {
+      "Guestbook": [
+        37
+      ]
+    },
+    "id": 38,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:25:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 37,
+        "linearizedBaseContracts": [
+          37
+        ],
+        "name": "Guestbook",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 7,
+            "name": "SignatureAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "indexed": false,
+                  "name": "message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7,
+                  "src": "109:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5,
+                  "indexed": false,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7,
+                  "src": "125:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:30:0"
+            },
+            "src": "88:51:0"
+          },
+          {
+            "constant": false,
+            "id": 10,
+            "name": "guests",
+            "nodeType": "VariableDeclaration",
+            "scope": 37,
+            "src": "143:16:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 8,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "143:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 9,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "143:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 26,
+              "nodeType": "Block",
+              "src": "203:86:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 18,
+                        "name": "name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "222:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 15,
+                        "name": "guests",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "210:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                          "typeString": "bytes32[] storage ref"
+                        }
+                      },
+                      "id": 17,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "210:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) returns (uint256)"
+                      }
+                    },
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "210:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 20,
+                  "nodeType": "ExpressionStatement",
+                  "src": "210:17:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6577206775657374207369676e617475726521",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "254:22:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_b7adbdf2fb3f549b52545a26ff65899008ea5c998679eaddcf93306b7dc4446f",
+                          "typeString": "literal_string \"New guest signature!\""
+                        },
+                        "value": "New guest signature!"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "278:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_b7adbdf2fb3f549b52545a26ff65899008ea5c998679eaddcf93306b7dc4446f",
+                          "typeString": "literal_string \"New guest signature!\""
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 21,
+                      "name": "SignatureAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "239:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_bytes32_$returns$__$",
+                        "typeString": "function (string memory,bytes32)"
+                      }
+                    },
+                    "id": 24,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "239:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25,
+                  "nodeType": "EmitStatement",
+                  "src": "234:49:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "signBook",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27,
+                  "src": "182:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "182:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "181:14:0"
+            },
+            "returnParameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "203:0:0"
+            },
+            "scope": 37,
+            "src": "164:125:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "352:26:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 33,
+                    "name": "guests",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10,
+                    "src": "366:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                      "typeString": "bytes32[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 32,
+                  "id": 34,
+                  "nodeType": "Return",
+                  "src": "359:13:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 36,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNames",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:2:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "334:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 29,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "334:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 30,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "334:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:18:0"
+            },
+            "scope": 37,
+            "src": "293:85:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 38,
+        "src": "64:317:0"
+      }
+    ],
+    "src": "35:346:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Guestbook.sol",
+      "exportedSymbols": {
+        "Guestbook": [
+          37
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "35:25:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            37
+          ],
+          "name": "Guestbook",
+          "scope": 38
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "SignatureAdded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "message",
+                      "scope": 7,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 2,
+                        "name": "ElementaryTypeName",
+                        "src": "109:6:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "VariableDeclaration",
+                    "src": "109:14:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "name",
+                      "scope": 7,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 4,
+                        "name": "ElementaryTypeName",
+                        "src": "125:7:0"
+                      }
+                    ],
+                    "id": 5,
+                    "name": "VariableDeclaration",
+                    "src": "125:12:0"
+                  }
+                ],
+                "id": 6,
+                "name": "ParameterList",
+                "src": "108:30:0"
+              }
+            ],
+            "id": 7,
+            "name": "EventDefinition",
+            "src": "88:51:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "guests",
+              "scope": 37,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes32[]",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "bytes32[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "143:7:0"
+                  }
+                ],
+                "id": 9,
+                "name": "ArrayTypeName",
+                "src": "143:9:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "143:16:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "signBook",
+              "scope": 37,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 27,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 11,
+                        "name": "ElementaryTypeName",
+                        "src": "182:7:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "VariableDeclaration",
+                    "src": "182:12:0"
+                  }
+                ],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "181:14:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14,
+                "name": "ParameterList",
+                "src": "203:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (bytes32) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "bytes32[] storage ref",
+                                  "value": "guests"
+                                },
+                                "id": 15,
+                                "name": "Identifier",
+                                "src": "210:6:0"
+                              }
+                            ],
+                            "id": 17,
+                            "name": "MemberAccess",
+                            "src": "210:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "bytes32",
+                              "value": "name"
+                            },
+                            "id": 18,
+                            "name": "Identifier",
+                            "src": "222:4:0"
+                          }
+                        ],
+                        "id": 19,
+                        "name": "FunctionCall",
+                        "src": "210:17:0"
+                      }
+                    ],
+                    "id": 20,
+                    "name": "ExpressionStatement",
+                    "src": "210:17:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_b7adbdf2fb3f549b52545a26ff65899008ea5c998679eaddcf93306b7dc4446f",
+                                  "typeString": "literal_string \"New guest signature!\""
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7,
+                              "type": "function (string memory,bytes32)",
+                              "value": "SignatureAdded"
+                            },
+                            "id": 21,
+                            "name": "Identifier",
+                            "src": "239:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4e6577206775657374207369676e617475726521",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"New guest signature!\"",
+                              "value": "New guest signature!"
+                            },
+                            "id": 22,
+                            "name": "Literal",
+                            "src": "254:22:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "bytes32",
+                              "value": "name"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "278:4:0"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "FunctionCall",
+                        "src": "239:44:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "EmitStatement",
+                    "src": "234:49:0"
+                  }
+                ],
+                "id": 26,
+                "name": "Block",
+                "src": "203:86:0"
+              }
+            ],
+            "id": 27,
+            "name": "FunctionDefinition",
+            "src": "164:125:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getNames",
+              "scope": 37,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 28,
+                "name": "ParameterList",
+                "src": "310:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 36,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes32[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "bytes32[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 29,
+                            "name": "ElementaryTypeName",
+                            "src": "334:7:0"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "ArrayTypeName",
+                        "src": "334:9:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclaration",
+                    "src": "334:16:0"
+                  }
+                ],
+                "id": 32,
+                "name": "ParameterList",
+                "src": "333:18:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 32
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 10,
+                          "type": "bytes32[] storage ref",
+                          "value": "guests"
+                        },
+                        "id": 33,
+                        "name": "Identifier",
+                        "src": "366:6:0"
+                      }
+                    ],
+                    "id": 34,
+                    "name": "Return",
+                    "src": "359:13:0"
+                  }
+                ],
+                "id": 35,
+                "name": "Block",
+                "src": "352:26:0"
+              }
+            ],
+            "id": 36,
+            "name": "FunctionDefinition",
+            "src": "293:85:0"
+          }
+        ],
+        "id": 37,
+        "name": "ContractDefinition",
+        "src": "64:317:0"
+      }
+    ],
+    "id": 38,
+    "name": "SourceUnit",
+    "src": "35:346:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x909de0c751D0e15635Fa1040c31445EdcA18c060",
+      "transactionHash": "0xc8b2ef95770cde3743c321340b2276b34b99f4de0a081abf6b448721a2532311"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-17T10:50:56.648Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
